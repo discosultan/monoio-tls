@@ -14,6 +14,7 @@ pub use server::{
     TlsAcceptor, TlsStream as ServerTlsStream, TlsStreamReadHalf as ServerTlsStreamReadHalf,
     TlsStreamWriteHalf as ServerTlsStreamWriteHalf,
 };
+pub use stream::Stream;
 
 /// A wrapper around an underlying raw stream which implements the TLS protocol.
 pub type TlsStream<IO> = stream::Stream<IO, rustls::Connection>;
